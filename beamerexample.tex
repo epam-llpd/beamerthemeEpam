@@ -1,0 +1,137 @@
+\input{common}
+\title[bash]{Пример использования\\темплейта для\\beamer-презентации}
+
+\begin{document}
+
+\begin{frame}
+	\titlepage
+\end{frame}
+
+\begin{frame}{Table of contents}
+	\tableofcontents
+\end{frame}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%   
+%%%%%%%%%% Content starts here %%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Text}
+\begin{frame}{Just a text}
+    \tiny Tiny text
+
+    \scriptsize Scriptsize text
+
+    \footnotesize Footnotesize text
+
+    \small Small text
+
+    \normalsize Normal text
+
+    \large large text
+
+    \Large Large text
+
+    \LARGE LARGE text
+
+    \huge huge text
+
+    \Huge Huge text
+
+\end{frame}
+
+\section{Items}
+\begin{frame}
+    \frametitle{List}
+
+    \begin{itemize}
+	\item Item 1
+	\item Item 2
+	\item Item 3
+	\item Item 4
+    \end{itemize}
+\end{frame}
+
+\section{Enumeration}
+\begin{frame}
+    \frametitle{Enumeration}
+
+    \begin{enumerate}
+	\item Item
+	\item Item
+	\item Item
+	\item Item
+    \end{enumerate}
+\end{frame}
+
+\section{Block}
+\begin{frame}{Block}
+	\begin{block}{Title}
+	    Some clever words here.
+	\end{block}
+\end{frame}
+
+\section{Graphics}
+\begin{frame}{Graphics}
+    \begin{center}
+	\includegraphics[width=0.5\textwidth]{epam}
+    \end{center}
+\end{frame}
+
+\section{Listing}
+\begin{frame}[fragile]{Listing from file}
+
+    \lstinputlisting[caption=Утечки памяти,language=C]{leaks.c}
+
+\end{frame}
+
+\begin{frame}[fragile]{Inline Listing}
+
+	\begin{lstlisting}[language=C]
+char *array;
+int i;
+
+for( i=0; i<100; i++)
+    array = malloc(10*sizeof(char));
+
+free( array);
+	\end{lstlisting}
+\end{frame}
+
+\section{Table}
+
+\begin{frame}{Simple table}
+
+    \begin{tabular}{| l || c | r |}
+      \hline
+	  1 & 2 & 3 \\ \hline 
+	  4 & 5 & 6 \\
+	  7 & 8 & 9 \\
+      \hline
+    \end{tabular}
+\end{frame}
+
+\section{Columns}
+
+\begin{frame}{Columns}
+	\begin{columns}
+		\column{0.4\textwidth}
+		\center\includegraphics[width=3cm]{epam}
+		\column{0.4\textwidth}
+		
+		{\rmfamily roman}
+		
+		{\sffamily sans serif}
+		
+		{\tt teletypefont}
+		
+		{\it italic}
+		
+		{\bf bold}
+		
+		\textit{\textbf{bold italic}}
+	\end{columns}
+\end{frame}
+
+\end{document}

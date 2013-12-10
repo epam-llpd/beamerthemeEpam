@@ -9,4 +9,4 @@ All other sources are licensed under GPL.
 
 Example is based on original work from Linux courses by Denis Pynkin, Yury Adamov and others: https://github.com/llpd/linux_courses.
 
-To build the example you need a working latex environment and beamer packages installed.
+To build the example you need a working latex environment and beamer packages installed. Run 'make pdf' to build the pdf version of the document.

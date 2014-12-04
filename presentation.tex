@@ -1,4 +1,5 @@
-\input{common}
+\input{sys/common}
+
 \title[bash]{Пример использования\\темплейта для\\beamer-презентации}
 
 \begin{document}
@@ -75,14 +76,14 @@
 \section{Graphics}
 \begin{frame}{Graphics}
     \begin{center}
-	\includegraphics[width=0.5\textwidth]{epam}
+	\includegraphics[width=0.5\textwidth]{pic/epam}
     \end{center}
 \end{frame}
 
 \section{Listing}
 \begin{frame}[fragile]{Listing from file}
 
-    \lstinputlisting[caption=Утечки памяти,language=C]{leaks.c}
+    \lstinputlisting[caption=Утечки памяти,language=C]{code/leaks.c}
 
 \end{frame}
 
@@ -117,7 +118,7 @@ free( array);
 \begin{frame}{Columns}
 	\begin{columns}
 		\column{0.4\textwidth}
-		\center\includegraphics[width=3cm]{epam}
+		\center\includegraphics[width=3cm]{pic/epam}
 		\column{0.4\textwidth}
 		
 		{\rmfamily roman}

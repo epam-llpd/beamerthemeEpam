@@ -1,4 +1,4 @@
-TARGET = beamerexample.pdf
+TARGET = presentation.pdf
 
 .PHONY: all tex clean
 

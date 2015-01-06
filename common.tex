@@ -16,11 +16,13 @@
 
 \usepackage{ucs}
 
+\graphicspath{{images/}}
 
 \usepackage{listings}
 \lstloadlanguages{bash}
 
 \lstset{escapechar=`,
+    inputpath=code,
 	extendedchars=false,
 	language=sh,
 	frame=single,
@@ -30,7 +32,7 @@
 	keywordstyle=\color{blue}, 
 	commentstyle=\itshape\color{brown},
 %	identifierstyle=\ttfamily, 
-	stringstyle=\mdseries\color{green}, 
+	stringstyle=\mdseries\color{darkgreen}, 
 	showstringspaces=false, 
 	numbers=left, 
 	numberstyle=\tiny, 
@@ -52,8 +54,3 @@
     morecomment=[l][\color{red}]{-},
     morestring=[b]",
 }
-
-\author[Epam]{{\bf Epam}\\Low Level Programming Department}
-
-%\institution[EPAM]{EPAM}
-%\logo{\includegraphics[width=1cm]{logo.png}}

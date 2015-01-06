@@ -1,5 +1,11 @@
-\input{common}
-\title[bash]{Пример использования\\темплейта для\\beamer-презентации}
+\input{sys/common}
+
+\title[bash]{Пример использования\\шаблона для\\beamer-презентации}
+
+\author[Epam]{{\bf Epam}\\Low Level Programming Department}
+
+%\institution[EPAM]{EPAM}
+%\logo{\includegraphics[width=1cm]{logo.png}}
 
 \begin{document}
 
@@ -10,8 +16,6 @@
 \begin{frame}{Table of contents}
 	\tableofcontents
 \end{frame}
-
-
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%   
 %%%%%%%%%% Content starts here %%%%%%%%%%
@@ -82,7 +86,7 @@
 \section{Listing}
 \begin{frame}[fragile]{Listing from file}
 
-    \lstinputlisting[caption=Утечки памяти,language=C]{leaks.c}
+    \lstinputlisting[caption=Утечки памяти,language=C]{code/leaks.c}
 
 \end{frame}
 

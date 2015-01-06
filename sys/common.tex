@@ -1,6 +1,6 @@
 \documentclass[ignorenonframetext, professionalfonts, hyperref={pdftex, unicode}]{beamer}
 
-\usetheme{Epam}
+\usepackage{sys/epam}
 
 \usepackage[russian]{babel}
 \usepackage[utf8]{inputenc}
@@ -20,6 +20,12 @@
 \usepackage{listings}
 \lstloadlanguages{bash}
 
+\definecolor{BlueLight}{HTML}{BFDDE9}
+\definecolor{Blue}{HTML}{006699}
+\definecolor{Pink}{HTML}{FF3366}
+\definecolor{Azure}{HTML}{3F9ABF}
+\definecolor{DarkGreen}{cmyk}{0.7, 0, 1, 0.5}
+
 \lstset{escapechar=`,
 	extendedchars=false,
 	language=sh,
@@ -27,10 +33,10 @@
 	tabsize=2, 
 	columns=fullflexible, 
 %	basicstyle=\scriptsize,
-	keywordstyle=\color{blue}, 
-	commentstyle=\itshape\color{brown},
+	keywordstyle=\color{Blue}, 
+	commentstyle=\itshape\color{DarkGreen},
 %	identifierstyle=\ttfamily, 
-	stringstyle=\mdseries\color{green}, 
+	stringstyle=\mdseries\color{Pink}, 
 	showstringspaces=false, 
 	numbers=left, 
 	numberstyle=\tiny, 
@@ -53,7 +59,4 @@
     morestring=[b]",
 }
 
-\author[Epam]{{\bf Epam}\\Low Level Programming Department}
-
-%\institution[EPAM]{EPAM}
-%\logo{\includegraphics[width=1cm]{logo.png}}
+\graphicspath{{images/}}

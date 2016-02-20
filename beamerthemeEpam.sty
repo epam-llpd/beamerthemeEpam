@@ -20,9 +20,13 @@
 
 \definecolor{EpamBlue}{HTML}{006699}
 \definecolor{EpamPink}{HTML}{FF3366}
-\definecolor{EpamAzure}{HTML}{3F9ABF}
+%\definecolor{EpamAzure}{HTML}{3F9ABF}
 \definecolor{Epam4box}{HTML}{7EBBD4}
 \definecolor{EpamBlueLight}{HTML}{BFDDE9}
+
+\definecolor{EpamAzure}{HTML}{2FC2D9}
+\definecolor{EpamGray}{HTML}{464547}
+\definecolor{EpamGrayLight}{HTML}{838384}
 
 
 \setbeamercolor*{lineup}{parent=palette primary}
@@ -35,13 +39,15 @@
 \setbeamercolor{epamline4}{fg=black,bg=Epam4box}
 \setbeamercolor{epamline5}{fg=black,bg=EpamBlueLight}
 
-\setbeamercolor{epamlinestring}{fg=EpamBlue,bg=white}
+%\setbeamercolor{epamlinestring}{fg=EpamBlue,bg=white}
+\setbeamercolor{epamlinestring}{fg=EpamGrayLight,bg=EpamGray}
 
 % system colors redefination
-\setbeamercolor{structure}{fg=EpamBlue}
-\setbeamercolor{frametitle}{bg=EpamBlue}
+\setbeamercolor{structure}{fg=EpamGray}
+\setbeamercolor{frametitle}{bg=EpamGray}
 \setbeamercolor{frametitle right}{bg=EpamBlueLight}
 
+\setbeamercolor*{item}{fg=EpamAzure}
 
 
 % some lengths (the height of the lines)
@@ -52,7 +58,7 @@
 \setlength{\beamer@decolines@linemid}{.025\paperheight}
 
 \newlength{\beamer@decolines@linebottom}
-\setlength{\beamer@decolines@linebottom}{.007\paperheight}
+\setlength{\beamer@decolines@linebottom}{.001\paperheight}
 
 \newlength{\beamer@decolines@headline}
 \setlength{\beamer@decolines@headline}{.019\paperheight}
@@ -63,20 +69,6 @@
 % Footline
 \defbeamertemplate*{footline}{decolines theme}
 {
-  \leavevmode%
-  % First line.
-  \hbox{%
-  \begin{beamercolorbox}[wd=.05\paperwidth,ht=\beamer@decolines@lineup,dp=0pt]{epamline1}%
-  \end{beamercolorbox}%
-  \begin{beamercolorbox}[wd=.10\paperwidth,ht=\beamer@decolines@lineup,dp=0pt]{epamline2}%
-  \end{beamercolorbox}%
-  \begin{beamercolorbox}[wd=.16\paperwidth,ht=\beamer@decolines@lineup,dp=0pt]{epamline3}%
-  \end{beamercolorbox}%
-  \begin{beamercolorbox}[wd=.26\paperwidth,ht=\beamer@decolines@lineup,dp=0pt]{epamline4}%
-  \end{beamercolorbox}%
-  \begin{beamercolorbox}[wd=.43\paperwidth,ht=\beamer@decolines@lineup,dp=0pt]{epamline5}%
-  \end{beamercolorbox}%
-  } %
   % Second line.
   \hbox{%
   \begin{beamercolorbox}[wd=.15\paperwidth,ht=\beamer@decolines@linemid,dp=0pt,right]{epamlinestring}%

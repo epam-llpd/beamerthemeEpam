@@ -51,6 +51,8 @@
 \setbeamercolor*{item}{fg=EpamBlue}
 \setbeamercolor{normal text}{fg=EpamGraphite}
 
+\setbeamertemplate{itemize items}[circle]
+\setbeamertemplate{enumerate items}[circle]
 
 % some lengths (the height of the lines)
 \newlength{\beamer@decolines@lineup}
@@ -67,6 +69,9 @@
 
 % String used between the current page and the total page count.
 \def\beamer@decolines@pageofpages{/}
+
+\setbeamerfont{frametitle}{series=\bfseries}
+%\setbeamerfont{normal text}{series=\bfseries}
 
 % Footline
 \defbeamertemplate*{footline}{decolines theme}
@@ -98,17 +103,17 @@
 % colors for headline
 % headline
 \setbeamertemplate{headline}{%
-\leavevmode%
-  \hbox{%
-    \begin{beamercolorbox}[wd=\paperwidth,ht=\beamer@decolines@headline,dp=1.125ex]{epamline2}%
-    \insertsectionnavigationhorizontal{\paperwidth}{}{\hskip0pt plus1filll}
-    \end{beamercolorbox}%
-  }
+%\leavevmode%
+%  \hbox{%
+%    \begin{beamercolorbox}[wd=\paperwidth,ht=\beamer@decolines@headline,dp=1.125ex]{epamline2}%
+%    \insertsectionnavigationhorizontal{\paperwidth}{}{\hskip0pt plus1filll}
+%    \end{beamercolorbox}%
+%  }
 }
 
-\setbeamercolor{block title}{use=structure,fg=white,bg=structure.fg}
-\setbeamercolor{block title alerted}{use=alerted text,fg=white,bg=alerted text.fg!75!black}
-\setbeamercolor{block title example}{use=example text,fg=white,bg=example text.fg!75!black}
+%\setbeamercolor{block title}{use=structure,fg=white,bg=structure.fg}
+%\setbeamercolor{block title alerted}{use=alerted text,fg=white,bg=alerted text.fg!75!black}
+%\setbeamercolor{block title example}{use=example text,fg=white,bg=example text.fg!75!black}
 
 \setbeamercolor{block body}{parent=normal text,use=block title,bg=block title.bg!5!white}
 \setbeamercolor{block body alerted}{parent=normal text,use=block title alerted,bg=block title alerted.bg!10!bg}

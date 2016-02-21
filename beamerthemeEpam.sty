@@ -51,6 +51,7 @@
 \setbeamercolor*{item}{fg=EpamBlue}
 \setbeamercolor{normal text}{fg=EpamGraphite}
 
+% redifining lists marker
 \setbeamertemplate{itemize items}[circle]
 \setbeamertemplate{enumerate items}[circle]
 
@@ -59,10 +60,10 @@
 \setlength{\beamer@decolines@lineup}{.015\paperheight}
 
 \newlength{\beamer@decolines@linemid}
-\setlength{\beamer@decolines@linemid}{.025\paperheight}
+\setlength{\beamer@decolines@linemid}{.035\paperheight}
 
 \newlength{\beamer@decolines@linebottom}
-\setlength{\beamer@decolines@linebottom}{.001\paperheight}
+\setlength{\beamer@decolines@linebottom}{.002\paperheight}
 
 \newlength{\beamer@decolines@headline}
 \setlength{\beamer@decolines@headline}{.019\paperheight}
@@ -77,22 +78,27 @@
 \defbeamertemplate*{footline}{decolines theme}
 {
   % Second line.
-  \hbox{%
-  \begin{beamercolorbox}[wd=.15\paperwidth,ht=\beamer@decolines@linemid,dp=3pt,right]{epamlinestring}%
-    \bfseries{\slshape{\tiny{{\raisebox{0.2ex}{<}}}{\footnotesize{epam}}{\tiny{\raisebox{0.2ex}{>}}}}}
+  \begin{beamercolorbox}[ht=\beamer@decolines@linemid]{epamlinestring}
+%  \hbox{%
+  \begin{beamercolorbox}[wd=.15\paperwidth,ht=\beamer@decolines@linemid,dp=5pt,right]{epamlinestring}%
+    %\bfseries{\slshape{\tiny{{\raisebox{0.2ex}{<}}}{\footnotesize{epam}}{\tiny{\raisebox{0.2ex}{>}}}}}
+    \begin{minipage}[c]{1cm}
+    \includegraphics[height=.03\textheight]{epam_white}
+    \end{minipage}
   \end{beamercolorbox}%
-  \begin{beamercolorbox}[wd=.01\paperwidth,ht=\beamer@decolines@linemid,dp=3pt,right]{epamlinestring}%
+  \begin{beamercolorbox}[wd=.01\paperwidth,ht=\beamer@decolines@linemid,dp=5pt,right]{epamlinestring}%
   \end{beamercolorbox}%
-  \begin{beamercolorbox}[wd=.64\paperwidth,ht=\beamer@decolines@linemid,dp=3pt,left]{epamlinestring}%
+  \begin{beamercolorbox}[wd=.64\paperwidth,ht=\beamer@decolines@linemid,dp=5pt,left]{epamlinestring}%
 
         \tiny{\sffamily{Excellence in Software Engineering}}
 
   \end{beamercolorbox}%
-  \begin{beamercolorbox}[wd=.2\paperwidth,ht=\beamer@decolines@linemid,dp=3pt,right]{epamlinestring}%
+  \begin{beamercolorbox}[wd=.2\paperwidth,ht=\beamer@decolines@linemid,dp=5pt,right]{epamlinestring}%
 %    \hbox{\usebeamerfont{palette primary}\scriptsize\insertframenumber{} \beamer@decolines@pageofpages{} \inserttotalframenumber\hspace*{2ex}}%
     \hbox{\usebeamerfont{palette primary}\tiny\insertframenumber{} \hspace*{2ex}}%
   \end{beamercolorbox}%
-  } %
+%  } %
+  \end{beamercolorbox}
   % Third line.
   \hbox{%
   \begin{beamercolorbox}[wd=\paperwidth,ht=\beamer@decolines@linebottom,dp=0pt]{}%

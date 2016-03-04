@@ -1,26 +1,30 @@
-TARGET = beamerexample.pdf
+DOCNAME=example
 
-.PHONY: all tex clean
+TARGET=$(DOCNAME)-article.pdf
+TARGET+=$(DOCNAME)-presentation.pdf
 
-%.dvi: %.tex
+TEXFILES=$(wildcard *.tex)
+
+all: $(TARGET)
+
+%.pdf: %.tex $(TEXFILES)
 	latex $<
 	latex $<
-	latex $<
 
-%.ps: %.dvi
-	dvips -j0 -Ppdf -o $@ $<
+$(DOCNAME)-article.pdf: bibarticle
+$(DOCNAME)-presentation.pdf: bibpresentation
 
-%.pdf: %.tex
-	pdflatex -interaction=nonstopmode $<
+.PHONY: bibarticle bibpresentation
+bibarticle: $(TEXFILES)
+	latex $(DOCNAME)-article.tex
+	bibtex $(DOCNAME)-article.aux
 
-tex: $(TARGET)
+bibpresentation: $(TEXFILES)
+	latex $(DOCNAME)-presentation.tex
+	bibtex $(DOCNAME)-presentation.aux
 
-bib: programm.aux
-	bibtex8 -s programm.aux
-
-all: tex
-
-clean: 
+.PHONY: clean
+clean:
 	@rm -f *.aux
 	@rm -f *.vrb
 	@rm -f *.snm
@@ -28,3 +32,6 @@ clean:
 	@rm -f *.out
 	@rm -f *.toc
 	@rm -f *.nav
+	@rm -f *.bbl
+	@rm -f *.blg
+	@rm -f $(TARGET)

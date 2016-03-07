@@ -73,7 +73,7 @@
 \def\beamer@decolines@pageofpages{/}
 
 \setbeamerfont{frametitle}{series=\bfseries}
-%\setbeamerfont{normal text}{series=\bfseries}
+%\setbeamerfont{title}{series=\bfseries}
 
 % Footline
 \defbeamertemplate*{footline}{decolines theme}
@@ -123,6 +123,21 @@
 \setbeamercolor{block body alerted}{parent=normal text,use=block title alerted,bg=block title alerted.bg!10!bg}
 \setbeamercolor{block body example}{parent=normal text,use=block title example,bg=block title example.bg!10!bg}
 
+\defbeamertemplate*{title page}{customized}[1][]
+{
+  \setbeamertemplate*{footline}{}
+  \hspace*{-6mm}
+  \includegraphics[height=0.09\textheight,keepaspectratio]{epam}\hfill\vfill\par
+  \usebeamerfont{title}\inserttitle\par
+%  \usebeamerfont{subtitle}\usebeamercolor[fg]{subtitle}\insertsubtitle\par
+  \bigskip
+  \usebeamerfont{author}\insertauthor\par
+  \usebeamerfont{institute}\insertinstitute\par
+  \bigskip
+  \usebeamerfont{date}\insertdate\par
+  % To start frame counter from the one next to title, not from title itself
+  %\addtocounter{framenumber}{-1}
+}
 
 \makeatother
 

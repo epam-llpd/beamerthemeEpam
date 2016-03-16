@@ -1,5 +1,6 @@
 \input{common}
-\title[bash]{Пример использования\\темплейта для\\beamer-презентации}
+\title[bash]{Пример использования темплейта для beamer-презентации}
+\subtitle{Как создать корпоративное настроение привычным \LaTeX-инструментом}
 
 \begin{document}
 
@@ -67,15 +68,21 @@
 
 \section{Block}
 \begin{frame}{Block}
-	\begin{block}{Title}
+	\begin{block}{Block title}
 	    Some clever words here.
 	\end{block}
+	\begin{alertblock}{Alert block title}
+	    Some clever words here. Now with alert.
+	\end{alertblock}
+	\begin{exampleblock}{Example block title}
+	    Some clever words here. Just example
+	\end{exampleblock}
 \end{frame}
 
 \section{Graphics}
 \begin{frame}{Graphics}
     \begin{center}
-	\includegraphics[width=0.5\textwidth]{epam}
+	\includegraphics[width=0.5\textwidth]{epam_primary}
     \end{center}
 \end{frame}
 
@@ -117,7 +124,7 @@ free( array);
 \begin{frame}{Columns}
 	\begin{columns}
 		\column{0.4\textwidth}
-		\center\includegraphics[width=3cm]{epam}
+		\center\includegraphics[width=3cm]{epam_primary}
 		\column{0.4\textwidth}
 		
 		{\rmfamily roman}

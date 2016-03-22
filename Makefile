@@ -1,19 +1,20 @@
 TARGET = beamerexample.pdf
 TEXFILES=$(wildcard *.tex)
+LATEX:=pdflatex
 
 all: $(TARGET)
 
 
 
 %.pdf: %.tex $(TEXFILES) beamerthemeEpam.sty
-	latex $<
-	latex $<
+	$(LATEX) $<
+	$(LATEX) $<
 
 $(TARGET): bibliography
 
 .PHONY: bibliography
 bibliography: beamerexample.tex
-	latex $<
+	$(LATEX) $<
 	bibtex $(patsubst %.tex, %.aux, $<)
 
 

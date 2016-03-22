@@ -1,10 +1,11 @@
-\documentclass[ignorenonframetext, professionalfonts, hyperref={pdftex, unicode}]{beamer}
+\documentclass[pdftex,ignorenonframetext, professionalfonts, hyperref={pdftex, unicode}]{beamer}
 
 \usetheme{Epam}
 
 \usepackage[russian]{babel}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
+\usepackage{cmap}
 
 \usepackage{textcomp}
 
@@ -58,3 +59,6 @@
 
 %\institution[EPAM]{EPAM}
 %\logo{\includegraphics[width=1cm]{logo.png}}
+
+\bibliographystyle{unsrt}
+\setbeamertemplate{bibliography item}{\insertbiblabel}

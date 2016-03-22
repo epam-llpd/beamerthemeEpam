@@ -1,26 +1,24 @@
 TARGET = beamerexample.pdf
+TEXFILES=$(wildcard *.tex)
 
-.PHONY: all tex clean
+all: $(TARGET)
 
-%.dvi: %.tex
+
+
+%.pdf: %.tex $(TEXFILES) beamerthemeEpam.sty
 	latex $<
 	latex $<
+
+$(TARGET): bibliography
+
+.PHONY: bibliography
+bibliography: beamerexample.tex
 	latex $<
+	bibtex $(patsubst %.tex, %.aux, $<)
 
-%.ps: %.dvi
-	dvips -j0 -Ppdf -o $@ $<
 
-%.pdf: %.tex
-	pdflatex -interaction=nonstopmode $<
-
-tex: $(TARGET)
-
-bib: programm.aux
-	bibtex8 -s programm.aux
-
-all: tex
-
-clean: 
+.PHONY: clean
+clean:
 	@rm -f *.aux
 	@rm -f *.vrb
 	@rm -f *.snm
@@ -28,3 +26,6 @@ clean:
 	@rm -f *.out
 	@rm -f *.toc
 	@rm -f *.nav
+	@rm -f *.bbl
+	@rm -f *.blg
+	@rm -f $(TARGET)
